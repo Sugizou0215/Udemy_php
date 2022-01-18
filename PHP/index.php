@@ -7,6 +7,11 @@
 
 <?php
 
+	require_once 'common.php';
+
+	echo $commonVariable;
+	echo commonTest();
+
 	//コメント
 	/*
 	コメント複数
