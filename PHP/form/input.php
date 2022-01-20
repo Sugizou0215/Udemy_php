@@ -94,9 +94,15 @@ require 'validation.php';
 
 <?php if($pageFlag === 2) : ?>
   <?php if($_POST['csrf'] === $_SESSION['csrfToken']) : ?>
+    <?php require '../mainte/insert.php';
+
+      insertContact($_POST);
+
+    ?>
     完了画面
 
     <?php unset($_SESSION['csrfToken']); ?>
+
   <?php endif; ?>
 <?php endif; ?>
 
@@ -185,9 +191,6 @@ require 'validation.php';
         </div>
       </div>
     </div>
-    
-    
-    
   </form>
 <?php endif; ?>
 
